@@ -278,6 +278,8 @@ Currently documentation is available for the following pipelines within specific
   - [AWS_TOWER](docs/pipeline/demultiplex/aws_tower.md)
 - eager
   - [EVA](docs/pipeline/eager/eva.md)
+- fetchngs
+  - [IBBA](docs/pipeline/fetchngs/ibba.md)
 - funcscan
   - [HKI](docs/pipeline/funcscan/hki.md)
 - mag
