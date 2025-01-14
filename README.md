@@ -287,6 +287,8 @@ Currently documentation is available for the following pipelines within specific
   - [EVA](docs/pipeline/mag/eva.md)
 - methylseq
   - [FUB Curta](docs/pipeline/methylseq/fub_curta.md)
+- nf-resequencing-mem
+  - [IBBA](docs/pipeline/nf-resequencing-mem/ibba.md)
 - rnafusion
   - [HASTA](docs/pipeline/rnafusion/hasta.md)
   - [MUNIN](docs/pipeline/rnafusion/munin.md)
