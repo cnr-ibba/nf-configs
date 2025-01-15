@@ -104,6 +104,7 @@ jobs:
           - "unsw_katana"
           - "ku_sund_danhead"
           - "kaust"
+          - "ki_luria"
           - "leicester"
           - "lugh"
           - "m3c"
