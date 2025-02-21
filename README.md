@@ -187,6 +187,7 @@ Currently documentation is available for the following systems:
 - [ROSLIN](docs/roslin.md)
 - [SAGE BIONETWORKS](docs/sage.md)
 - [SANGER](docs/sanger.md)
+- [SEADRAGON](docs/seadragon.md)
 - [SEATTLECHILDRENS](docs/seattlechildrens.md)
 - [SEAWULF](docs/seawulf.md)
 - [SEG_GLOBE](docs/seg_globe.md)
@@ -290,6 +291,8 @@ Currently documentation is available for the following pipelines within specific
   - [FUB Curta](docs/pipeline/methylseq/fub_curta.md)
 - nf-resequencing-mem
   - [IBBA](docs/pipeline/nf-resequencing-mem/ibba.md)
+- multiplesequencealign
+  - [CRG](docs/pipeline/multiplesequencealign/crg.md)
 - rnafusion
   - [HASTA](docs/pipeline/rnafusion/hasta.md)
   - [MUNIN](docs/pipeline/rnafusion/munin.md)
@@ -307,6 +310,7 @@ Currently documentation is available for the following pipelines within specific
   - [hasta](docs/pipeline/taxprofiler/hasta.md)
 - proteinfold
   - [CRG](docs/pipeline/proteinfold/crg.md)
+  - [nci_gadi](docs/pipeline/proteinfold/nci_gadi.md)
 
 ### Pipeline-specific documentation
 
