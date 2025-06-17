@@ -273,6 +273,7 @@ Currently documentation is available for the following pipelines within specific
 
 - ampliseq
   - [BINAC](docs/pipeline/ampliseq/binac.md)
+  - [IBBA](docs/pipeline/ampliseq/ibba.md)
   - [UPPMAX](docs/pipeline/ampliseq/uppmax.md)
 - cutandrun
   - [UNC_LONGLEAF](docs/pipeline/cutandrun/unc_longleaf.md)
