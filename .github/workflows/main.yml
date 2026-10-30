@@ -9,20 +9,44 @@ concurrency:
 
 jobs:
   check_nextflow_config:
-    runs-on: ubuntu-latest
     name: Check if nextflow config runs in repository root
+    runs-on: ubuntu-latest
+    strategy:
+      fail-fast: false
+      matrix:
+        NXF_VER:
+          - 25.04.0
+          - latest-everything
     steps:
       - uses: actions/checkout@v4
-      - name: Install Nextflow
-        run: |
-          wget -qO- get.nextflow.io | bash
-          sudo mv nextflow /usr/local/bin/
+      - name: Set up Nextflow
+        uses: nf-core/setup-nextflow@v2
+        with:
+          version: ${{ matrix.NXF_VER }}
       - run: nextflow config -show-profiles ${GITHUB_WORKSPACE}
+
+  lint_nextflow_config:
+    name: Check if nextflow files are valid with nextflow lint
+    runs-on: ubuntu-latest
+    strategy:
+      fail-fast: false
+      matrix:
+        NXF_VER:
+          - 25.04.0
+          - latest-everything
+    steps:
+      - uses: actions/checkout@v4
+      - name: Set up Nextflow
+        uses: nf-core/setup-nextflow@v2
+        with:
+          version: ${{ matrix.NXF_VER }}
+      - run: nextflow lint ${GITHUB_WORKSPACE}
 
   profile_test:
     runs-on: ubuntu-latest
     name: Run ${{ matrix.profile }} profile
     strategy:
+      fail-fast: false
       matrix:
         profile:
           - "ibba"
@@ -37,7 +61,7 @@ jobs:
         uses: nf-core/setup-nextflow@v2
         with:
           version: "latest-everything"
-      - name: Check ${{ matrix.profile }} profile
+      - name: Check ${{ matrix.profile }} profile
         env:
           SCRATCH: "~"
           NXF_GLOBAL_CONFIG: awsbatch.config
